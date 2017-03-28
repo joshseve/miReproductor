@@ -8,18 +8,38 @@
   </head>
 
   <body>
+
+    <BODY BGCOLOR="grey">
+    <h2> ¡¡¡Te invito a escuchar el éxito musical del momento!!! </h2>
+    <h3> "This Is What You Came For" - Calvin Harris (feat. Rihanna) </h3>
+
       <div>
         <audio id="miRola" src="calvin_harris_this_is_what_you_came_for_feat_rihanna_(vmusice.net).mp3"></audio>
         <div>
-          <section id="volumeTime">
+
+          <section id="barraProgreso">
             <input type="range" min="0" max="313" step="0.1" value="0.5" id="rango"/>
           </section>
-          <button onclick="reproducir()">Dale Play</button>
-          <button onclick="document.getElementById('miRola').pause()">Pon Pausa</button>
-          <button onclick="document.getElementById('miRola').volume+=0.1">Súbele el Volumen</button>
-          <button onclick="document.getElementById('miRola').volume-=0.1">Bájale el Volumen</button>
+
+                    <br>
+              <button type="button" id="play" onclick="playAudio()">Dale Play</button>
+              <button type="button" id="pause" onclick="pauseAudio()">Ponle Pausa</button>
+              <button type="button" id="stop" onclick="stopAudio()">Para la Rola</button>
+                   <br>
+                   <br>
+              <button type="button" id="volMas" onclick="subirVolumen()">Súbele un poco</button>
+              <button type="button" id="volMenos" onclick="bajarVolumen()">Bájale tantito</button>
+              <button type="button" id="retroceder" onclick="atrasar()">Regresale aquí</button>
+              <button type="button" id="avanzar" onclick="adelantar()">Adelantale aquí</button>
+
         </div>
       </div>
+
+      <p>
+        Canta con ellos: http://www.azlyrics.com/lyrics/calvinharris/thisiswhatyoucamefor.html
+      </p>
+
       <script  type='text/javascript' src='js/reproductorHTML5.js'></script>
+
   </body>
 </html>
